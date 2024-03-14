@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets";
+import GithubIcon from "../assets/GitHub.svg";
+import SpotifyIcon from "../assets/Spotify.svg";
+---
+
+<nav class="navbar">
+  <div class="navbar-header">Soph.systems</div>
+  <div class="navbar-links">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="https://soph.systems/#">Contact</a></li>
+      <li>
+        <a href="https://github.com/Sophed/"
+          ><Image src={GithubIcon} alt="GitHub" /></a
+        >
+      </li>
+      <li><a href="#"><Image src={SpotifyIcon} alt="Spotify" /></a></li>
+    </ul>
+  </div>
+</nav>
+<style>
+  .navbar {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    .navbar-header {
+      font-family: "Allura", cursive;
+      font-size: 36px;
+    }
+    .navbar-links {
+      ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        align-items: center;
+        gap: 15px;
+        li {
+          a {
+            font-size: 15px;
+            color: var(--text);
+            text-decoration: none;
+            &:hover {
+              color: var(--white);
+            }
+          }
+        }
+      }
+    }
+  }
+</style>
