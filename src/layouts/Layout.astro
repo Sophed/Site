@@ -46,6 +46,20 @@ import Navbar from "../components/Navbar.astro";
     overflow-x: hidden;
     color: var(--text);
   }
+  body::-webkit-scrollbar {
+    width: 0.7em;
+    background: var(--background-color);
+  }
+
+  body::-webkit-scrollbar-track {
+    background-color: transparent;
+    background-size: 400% 400%;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #39393986;
+    border-radius: 12px;
+  }
 
   strong {
     font-weight: unset;
