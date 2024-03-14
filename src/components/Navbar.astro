@@ -32,13 +32,33 @@ import SpotifyIcon from "../assets/Spotify.svg";
       font-size: 36px;
     }
     .navbar-links {
+      display: flex;
+      justify-content: left;
+      align-items: flex-start;
+
       ul {
         display: flex;
         flex-direction: row;
         list-style: none;
         align-items: center;
-        gap: 15px;
+        gap: 20px;
+        justify-content: space-evenly;
         flex-wrap: wrap;
+        @media screen and (max-width: 537px) {
+          li:nth-child(1) {
+            display: none;
+          }
+        }
+        @media screen and (max-width: 470px) {
+          li:nth-child(2) {
+            display: none;
+          }
+        }
+        @media screen and (max-width: 393px) {
+          li:nth-child(3) {
+            display: none;
+          }
+        }
         li {
           a {
             font-size: 15px;
