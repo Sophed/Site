@@ -1,7 +1,6 @@
 ---
 import { Image } from "astro:assets";
 import GithubIcon from "../assets/GitHub.svg";
-import SpotifyIcon from "../assets/Spotify.svg";
 ---
 
 <nav class="navbar">
@@ -10,19 +9,19 @@ import SpotifyIcon from "../assets/Spotify.svg";
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="https://soph.systems/#">Contact</a></li>
+      <!-- <li><a href="https://soph.systems/#">Contact</a></li> -->
       <li>
         <a href="https://github.com/Sophed/"
           ><Image src={GithubIcon} alt="GitHub" /></a
         >
       </li>
-      <li><a href="#"><Image src={SpotifyIcon} alt="Spotify" /></a></li>
     </ul>
   </div>
 </nav>
 <style>
   .navbar {
     padding: 1rem;
+    margin: 0.2em 0.6em;
     display: flex;
     justify-content: space-between;
     align-items: center;
