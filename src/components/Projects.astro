@@ -1,0 +1,45 @@
+---
+import ProjectsCard from "./ProjectsCard.astro";
+---
+
+<section class="projects">
+  <ProjectsCard
+    title="Dotfiles"
+    link="#"
+    content="My personal Linux configs, scripts and wallpapers."
+  />
+  <ProjectsCard
+    title="EctoHash"
+    link="#"
+    content="Simple scanning tool for Minecraft mods to check them against known cheats."
+  />
+  <ProjectsCard
+    title="MCL"
+    link="#"
+    content="Minecraft Lookup (MCL), a tiny CLI utility for quickly looking up player profiles."
+  />
+  <ProjectsCard
+    title="Stray API"
+    link="#"
+    content="Back end API for stray.gg, allows for monitoring player counts and guild details, public documentation soon."
+  />
+</section>
+
+<style>
+  .projects {
+    margin-inline: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 680px;
+    gap: 30px;
+    padding: 70px;
+    @media screen and (max-width: 772px) {
+      width: auto;
+      padding: 70px 30px;
+    }
+    @media screen and (max-width: 387px;) {
+      padding: 70px 10px;
+    }
+  }
+</style>

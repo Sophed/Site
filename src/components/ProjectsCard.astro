@@ -1,0 +1,52 @@
+---
+interface Props {
+  link: string;
+  title: string;
+  content: string;
+}
+
+import { Image } from "astro:assets";
+import GitHubIcon from "../assets/GitHub.svg";
+const { link, title, content } = Astro.props;
+---
+
+<div class="project-card">
+  <div class="project-card-header">
+    <h2>{title}</h2>
+    <a href={link} target="_blank">
+      <Image src={GitHubIcon} alt={"GitHub"} />
+    </a>
+  </div>
+  <div class="project-card-content"><p>{content}</p></div>
+</div>
+
+<style>
+  .project-card {
+    display: flex;
+    flex-grow: 1;
+    background-color: var(--second-background);
+    height: 7rem;
+    width: 14rem;
+    padding: 1rem;
+    border-radius: 10px;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.085);
+    .project-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h2 {
+        text-transform: capitalize;
+        color: var(--white);
+        opacity: 85%;
+      }
+    }
+    .project-card-content {
+      margin-top: -1.4rem;
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+</style>
